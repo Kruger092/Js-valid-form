@@ -18,13 +18,13 @@ function checkInputs() {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
   
-  if(firstNameValue === '') {
+  if(firstNameValue.length < 3 || firstNameValue.length > 15) {
     setErrorFor(firstName, 'Введите корректное имя');
   } else {
     setSuccessFor(firstName);
   }
 
-  if(secondNameValue === '') {
+  if(secondNameValue.length < 3 || secondNameValue.length > 15) {
     setErrorFor(secondName, 'Введите корректную фамилию');
   } else {
     setSuccessFor(secondName);
@@ -46,7 +46,7 @@ function checkInputs() {
     setSuccessFor(telNumber);
   }
   
-  if(passwordValue === '') {
+  if(passwordValue.length < 8 || passwordValue.length > 15) {
     setErrorFor(password, 'Введите корректный пароль (не менее 8 символов)');
   } else {
     setSuccessFor(password);
@@ -54,7 +54,6 @@ function checkInputs() {
 }
 
 function setErrorFor(input, message) {
-  console.log(input, message);
   const formControl = input.parentElement;
   const span = formControl.querySelector('span');
   formControl.className = 'input invalid';
