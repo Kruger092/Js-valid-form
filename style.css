@@ -1,0 +1,82 @@
+body {
+  background: linear-gradient(270deg, #75cfd6 0%, #59bfef 100%);
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  height: 100vh;
+}
+
+.input {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.input label {
+  margin-bottom: 3px;
+  padding: 0;
+  display: block;
+  font-weight: bold;
+}
+
+.input input {
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #bebebe;
+  padding: 7px;
+  width:100%;
+  outline: none;
+  transition: all 300ms ease-in-out;
+  border-radius: 5px;
+}
+
+.input span {
+  color: #e41829;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.input.invalid label {
+  color: #e41829;
+}
+
+.input.invalid input {
+  border: 1px solid #f01f30;
+}
+
+.input.success label {
+  color: #15970a;
+}
+
+.input.success input {
+  border: 1px solid #15970a;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+}
+
+.validateBtn {
+  width: 150px;
+  height: 35px;
+  background: rgb(248, 165, 10);
+  border: 1px solid green;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.validateBtn:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
